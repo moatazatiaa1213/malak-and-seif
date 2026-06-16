@@ -658,16 +658,25 @@
       }
       document.documentElement.classList.add('lock');
 
-      // Let the ring animation play, then dissolve into the page.
-      var wait = 5000;
-      setTimeout(function () {
+      var dismissed = false;
+      function dismiss(fast) {
+        if (dismissed) return;
+        dismissed = true;
         window.scrollTo(0, 0);
+        if (fast) intro.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
         intro.classList.add('gone');
         document.documentElement.classList.remove('lock');
         document.body.classList.remove('lock');
         document.body.classList.remove('intro-active');
-        setTimeout(function () { intro.style.display = 'none'; }, 1200);
-      }, wait);
+        setTimeout(function () { intro.style.display = 'none'; }, fast ? 450 : 1200);
+      }
+
+      // Tap/click anywhere on the intro skips it immediately.
+      intro.addEventListener('click', function () { dismiss(true); });
+      intro.addEventListener('touchstart', function () { dismiss(true); }, { passive: true });
+
+      // Auto-dismiss after 5 s so it's hands-free on desktop.
+      setTimeout(function () { dismiss(false); }, 5000);
     })();
 
     // Gentle scroll-reveal — no dependencies.
