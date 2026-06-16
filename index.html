@@ -659,8 +659,8 @@
 
       <h1 class="names reveal d3">Malak &amp; Seif</h1>
 
-      <p class="when reveal d4">July 2<sup>nd</sup>, 2026 &nbsp;&middot;&nbsp; 8:00 PM</p>
-      <p class="where reveal d5">39 Mohamed Tawfik Diab, Makram Ebeid</p>
+      <p class="when reveal d4">July 2<sup>nd</sup>, 2026 &nbsp;&middot;&nbsp; 7:00 PM</p>
+      <p class="where reveal d5">Elgendy&rsquo;s House</p>
     </div>
   </section>
 
@@ -710,11 +710,11 @@
         </div>
         <div class="info-block reveal d3">
           <p class="label">Time</p>
-          <p class="value"><span class="big">8:00</span>in the evening</p>
+          <p class="value"><span class="big">7:00</span>in the evening</p>
         </div>
         <div class="info-block reveal d4">
           <p class="label">Where</p>
-          <p class="value">39 Mohamed Tawfik Diab,<br/>Makram Ebeid, Cairo</p>
+          <p class="value">Elgendy&rsquo;s House</p>
         </div>
       </div>
 
@@ -736,7 +736,7 @@
   <!-- ===================== MAP ===================== -->
   <section class="map-section">
     <h2 class="reveal">Find Us</h2>
-    <p class="sub reveal d1">39 Mohamed Tawfik Diab, Makram Ebeid, Nasr City, Cairo</p>
+    <p class="sub reveal d1">Elgendy&rsquo;s House</p>
     <div class="map-frame reveal d2">
       <iframe
         title="Venue location map"
@@ -843,7 +843,7 @@
       var btn = document.getElementById('addToCal');
       if (!btn) return;
 
-      // Floating local time so it always shows 8:00 PM at the venue.
+      // Floating local time so it always shows 7:00 PM at the venue.
       var ics = [
         'BEGIN:VCALENDAR',
         'VERSION:2.0',
@@ -853,11 +853,11 @@
         'BEGIN:VEVENT',
         'UID:malak-seif-engagement-20260702@invite',
         'DTSTAMP:20250101T000000Z',
-        'DTSTART:20260702T200000',
-        'DTEND:20260702T230000',
+        'DTSTART:20260702T190000',
+        'DTEND:20260702T220000',
         'SUMMARY:Malak & Seif — Engagement Party',
         'DESCRIPTION:Join us as we celebrate our engagement!',
-        'LOCATION:39 Mohamed Tawfik Diab\\, Makram Ebeid\\, Nasr City\\, Cairo',
+        'LOCATION:Elgendy’s House\\, Makram Ebeid\\, Cairo',
         'BEGIN:VALARM',
         'TRIGGER:-P1D',
         'ACTION:DISPLAY',
