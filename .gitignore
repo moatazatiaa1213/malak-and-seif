@@ -1,0 +1,9 @@
+# Local editor / harness config
+.claude/
+
+# Unrelated documents in this folder
+*.docx
+
+# OS files
+Thumbs.db
+.DS_Store
